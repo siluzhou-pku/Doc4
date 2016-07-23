@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="siluzhou">
+    <meta name="keywords" content="php">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PHP之路</title>
+    <!-- Style CSS -->
+    <link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    <link href="css/style.css" media="screen" rel="stylesheet">
+    <!-- basic styles -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/font-awesome-ie7.min.css" />
+    <![endif]-->
+
+    <!-- page specific plugin styles -->
+
+    <!-- fonts -->
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+    <!-- ace styles -->
+
+    <link rel="stylesheet" href="css/ace.min.css" />
+    <link rel="stylesheet" href="css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="css/ace-skins.min.css" />
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ace-ie.min.css" />
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+
+    <script src="js/ace-extra.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="body_wrap">
+        <div class="container">
+            <!-- 顶层菜单 -->
+            <div class="content " role="main">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Website Menu -->
+                        <div id="topmenu">
+                            <ul class="dropdown clearfix boxed boxed-blue">
+
+                                <li class="menu-level-0"><a href="index.html"><span>PHP之路</span></a></li>
+
+                                <li class="menu-level-0"><a href="course.html"><span>课程</span></a></li>
+                                <li class="menu-level-0"><a href="test.html"><span>测试</span></a></li>
+                                <li class="menu-level-0"><a href="personal.html"><span>个人信息</span></a></li>
+                                <li class="menu-level-0"><a href="about.html"><span>关于</span></a></li>
+                                <li class="menu-level-0"><a href="contact.html"><span>联系我们</span></a></li>
+                                <li class="menu-search">
+                                    <form id="searchForm" class="menu-search-form" method="post">
+                                        <input type="text" name="search" value="" class="menu-search-field"
+                                               placeholder="Search the website"/>
+                                        <input type="submit" value="" class="btn menu-search-submit" name="search-send"/>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--课程内容-->
+    <div class="container">
+        <div class="page-content">
+            <div class="page-header">
+                <h1>PHP Course</h1>
+            </div><!-- /.page-header -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- 左侧目录-->
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="widget-box">
+                                <div class="widget-header header-color-blue2">
+                                    <h4 class="lighter smaller">Categories</h4>
+                                </div>
+                                <div class="widget-body">
+                                    <div class="widget-main padding-8">
+                                        <div class="tree tree-selectable" id="tree1"><div style="display:none;" class="tree-folder">
+                                            <div class="tree-folder-header">
+                                                <i class="icon-plus"></i>
+                                                <div class="tree-folder-name"></div>
+                                            </div>
+                                            <div class="tree-folder-content"></div>
+                                            <div style="display: none;" class="tree-loader"></div>
+                                        </div>
+                                            <div style="display:none;" class="tree-item">
+                                                <i class="icon-remove"></i>
+                                                <div class="tree-item-name"></div>
+                                            </div>
+                                            <div style="display: block;" class="tree-folder">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name">概念云</div>
+                                                </div>
+                                                <div class="tree-folder-content"></div>
+                                                <div style="display: none;" class="tree-loader">
+                                                    <div class="tree-loading">
+                                                        <i class="icon-refresh icon-spin blue"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="display: block;" class="tree-folder">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name">设计模式</div>
+                                                </div>
+                                                <div class="tree-folder-content"></div>
+                                                <div style="display: none;" class="tree-loader">
+                                                    <div class="tree-loading">
+                                                        <i class="icon-refresh icon-spin blue"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="display: block;" class="tree-folder">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name">PHP数组</div>
+                                                </div>
+                                                <div class="tree-folder-content"></div>
+                                                <div style="display: none;" class="tree-loader">
+                                                    <div class="tree-loading">
+                                                        <i class="icon-refresh icon-spin blue"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="display: block;" class="tree-folder">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name">PHP工具安装配置</div>
+                                                </div>
+                                                <div class="tree-folder-content"></div>
+                                                <div style="display: none;" class="tree-loader">
+                                                    <div class="tree-loading">
+                                                        <i class="icon-refresh icon-spin blue"></i>
+                                                    </div></div>
+                                            </div>
+                                            <div style="display: block;" class="tree-folder">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name">PHP工具使用教程</div>
+                                                </div>
+                                                <div class="tree-folder-content">
+                                                </div>
+                                                <div style="display: none;" class="tree-loader">
+                                                    <div class="tree-loading">
+                                                        <i class="icon-refresh icon-spin blue"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="display: block;" class="tree-folder">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name">PHP基础</div>
+                                                </div>
+                                                <div class="tree-folder-content"></div>
+                                                <div style="display: none;" class="tree-loader">
+                                                    <div class="tree-loading">
+                                                        <i class="icon-refresh icon-spin blue"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div id="vsdr"><h1>命名空间</h1>
+                                        <blockquote>
+                                        </blockquote>
+                                        <p>参考网站：</p>
+                                        <p><a href="http://baike.baidu.com/link?url=16qeRBar3zdEbatfn8FB7_lWqDuK-zY8uJYAYs-IN4QgqrxCLPUERWynDpvRcnQGqupsznAImCbMdDn1yIahFq">百度百科</a></p>
+                                        <p><a href="http://php.net/manual/zh/language.namespaces.rationale.php">官方文档（中文）</a></p>
+                                        <p><a href="http://www.cnblogs.com/kuyuecs/p/3556421.html"><a href="http://www.cnblogs.com/kuyuecs/p/3556421.html">http://www.cnblogs.com/kuyuecs/p/3556421.html</a></a></p>
+                                        <h2>定义</h2>
+                                        <p>namespace即“命名空间”，也称“名称空间” 、”名字空间”。VS.NET中的各种语言使用的一种代码组织的形式 通过名称空间来分类，区别不同的代码功能 同时也是VS.NET中所有类的完全名称的一部分。</p>
+                                        <p>从广义上来说，命名空间是一种封装事物的方法。在很多地方都可以见到这种抽象概念。例如，在操作系统中目录用来将相关文件分组，对于目录中的文件来说，它就扮演了命名空间的角色。具体举个例子，文件 foo.txt 可以同时在目录/home/greg 和 /home/other 中存在，但在同一个目录中不能存在两个 foo.txt 文件。另外，在目录 /home/greg 外访问 foo.txt 文件时，我们必须将目录名以及目录分隔符放在文件名之前得到 /home/greg/foo.txt。这个原理应用到程序设计领域就是命名空间的概念。 </p>
+                                        <h2>WHY</h2>
+                                        <p>命名空间是用来组织和重用代码的。如同名字一样的意思，NameSpace（名字空间），之所以出来这样一个东西，是因为人类可用的单词数太少，并且不同的人写的程序不可能所有的变量都没有重名现象，对于库来说，这个问题尤其严重，如果两个人写的库文件中出现同名的变量或函数(不可避免)，使用起来就有问题了。为了解决这个问题，引入了名字空间这个概念，通过使用 namespace xxx；你所使用的库函数或变量就是在该名字空间中定义的，这样一来就不会引起不必要的冲突了。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                                    </div>
+
+                    <script type="text/javascript">
+                        var $assets = "assets";//this will be used in fuelux.tree-sampledata.js
+                    </script>
+
+                </div><!-- /.main-container-inner -->
+
+                <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                    <i class="icon-double-angle-up icon-only bigger-110"></i>
+                </a>
+            </div><!-- /.main-container -->
+
+            <!-- basic scripts -->
+
+            <!--[if !IE]> -->
+
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+            <!-- <![endif]-->
+
+            <!--[if IE]>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <![endif]-->
+
+            <!--[if !IE]> -->
+
+            <script type="text/javascript">
+                window.jQuery || document.write("<script src='js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+            </script>
+
+            <!-- <![endif]-->
+
+            <!--[if IE]>
+            <script type="text/javascript">
+                window.jQuery || document.write("<script src='js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+            </script>
+            <![endif]-->
+
+            <script type="text/javascript">
+                if("ontouchend" in document) document.write("<script src='js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+            </script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/typeahead-bs2.min.js"></script>
+
+            <!-- page specific plugin scripts -->
+
+            <script src="js/fuelux/data/phpdoc.tree.js"></script>
+            <script src="js/fuelux/fuelux.tree.min.js"></script>
+
+            <!-- ace scripts -->
+
+            <script src="js/ace-elements.min.js"></script>
+            <script src="js/ace.min.js"></script>
+
+            <!-- inline scripts related to this page -->
+
+            <script type="text/javascript">
+                jQuery(function($){
+
+                    $('#tree1').ace_tree({
+                        dataSource: treeDataSource ,
+                        multiSelect:true,
+                        loadingHTML:'<div class="tree-loading"><i class="icon-refresh icon-spin blue"></i></div>',
+                        'open-icon' : 'icon-minus',
+                        'close-icon' : 'icon-plus',
+                        'selectable' : true,
+                        'selected-icon' : 'icon-ok',
+                        'unselected-icon' : 'icon-remove'
+                    });
+                });
+            </script>
+            <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+                    <!-- PAGE CONTENT ENDS -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+</html>

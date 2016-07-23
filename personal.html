@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]>
+<html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="siluzhou">
+    <meta name="keywords" content="php">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PHP之路</title>
+    <!-- Style CSS -->
+    <link href="css/style.css" media="screen" rel="stylesheet">
+    <link href="css/bootstrap.css" media="screen" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!--[if IE 7]>
+    <link href="css/font-awesome-ie7.min.css" rel="stylesheet"/>
+    <![endif]-->
+
+    <!-- page specific plugin styles -->
+
+    <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css"/>
+    <link rel="stylesheet" href="css/jquery.gritter.css"/>
+    <link rel="stylesheet" href="css/select2.css"/>
+    <link rel="stylesheet" href="css/bootstrap-editable.css"/>
+
+    <!-- fonts -->
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
+
+    <!-- ace styles -->
+
+    <link rel="stylesheet" href="css/ace.min.css"/>
+    <link rel="stylesheet" href="css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="css/ace-skins.min.css"/>
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ace-ie.min.css"/>
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+
+    <script src="js/ace-extra.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="body_wrap">
+    <div class="container">
+        <!-- 顶层菜单 -->
+        <div class="content " role="main">
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Website Menu -->
+                    <div id="topmenu">
+                        <ul class="dropdown clearfix boxed boxed-blue">
+
+                            <li class="menu-level-0"><a href="index.html"><span>PHP之路</span></a></li>
+
+                            <li class="menu-level-0"><a href="course.html"><span>课程</span></a></li>
+                            <li class="menu-level-0"><a href="test.html"><span>测试</span></a></li>
+                            <li class="menu-level-0"><a href="personal.html"><span>个人信息</span></a></li>
+                            <li class="menu-level-0"><a href="about.html"><span>关于</span></a></li>
+                            <li class="menu-level-0"><a href="contact.html"><span>联系我们</span></a></li>
+                            <li class="menu-search">
+                                <form id="searchForm" class="menu-search-form" method="post">
+                                    <input type="text" name="search" value="" class="menu-search-field"
+                                           placeholder="Search the website"/>
+                                    <input type="submit" value="" class="btn menu-search-submit" name="search-send"/>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    个人信息
+                    <small>
+                        <a class="blue" href="#">
+                            <i class="icon-pencil bigger-125"></i>
+                        </a>
+                    </small>
+
+                </h1>
+
+            </div><!-- /.page-header -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hr dotted"></div>
+                    <div class="user-profile row" id="user-profile-1">
+                        <!--左侧个人信息-->
+                        <div class="col-xs-12 col-sm-3 center">
+                            <div>
+                                <!--头像-->
+                                    <span class="profile-picture">
+                                        <img src="images/avatars/profile-pic.jpg" alt="Alex's Avatar"
+                                             class="editable img-responsive editable-click editable-empty" id="avatar">
+									</span>
+                                <div class="space-4"></div>
+                                <!--姓名栏-->
+                                <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+                                    <div class="inline position-relative">
+                                        <a data-toggle="dropdown" class="user-title-label dropdown-toggle" href="#">
+                                            <i class="icon-circle light-green middle"></i>
+                                            &nbsp;
+                                            <span class="white">PHP 大师</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-6"></div>
+                            <!--添加好友栏-->
+                            <div class="profile-contact-info">
+                                <div class="profile-contact-links align-left">
+                                    <a href="#" class="btn btn-link">
+                                        <i class="icon-plus-sign bigger-120 green"></i>
+                                        Add as a friend
+                                    </a>
+
+                                    <a href="#" class="btn btn-link">
+                                        <i class="icon-envelope bigger-120 pink"></i>
+                                        Send a message
+                                    </a>
+
+                                    <a href="#" class="btn btn-link">
+                                        <i class="icon-globe bigger-125 blue"></i>
+                                        www.alexdoe.com
+                                    </a>
+                                </div>
+
+                                <div class="space-6"></div>
+                                <!--相关链接：github,微博，人人-->
+
+                                <div class="profile-social-links center">
+                                    <a data-original-title="Visit my Facebook" title="" class="tooltip-info" href="#">
+                                        <i class="middle icon-github-sign icon-2x blue"></i>
+                                    </a>
+                                    <a data-original-title="Visit my Twitter" title="" class="tooltip-info" href="#">
+                                        <i class="middle icon-weibo icon-2x light-blue"></i>
+                                    </a>
+
+                                    <a data-original-title="Visit my Pinterest" title="" class="tooltip-error" href="#">
+                                        <i class="middle icon-renren icon-2x red"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="hr hr12 dotted"></div>
+                            <!--关注人-->
+                            <div class="clearfix">
+                                <div class="grid2">
+                                    <span class="bigger-175 blue">25</span>
+
+                                    <br>
+                                    Followers
+                                </div>
+
+                                <div class="grid2">
+                                    <span class="bigger-175 blue">12</span>
+
+                                    <br>
+                                    Following
+                                </div>
+                            </div>
+
+                            <div class="hr hr16 dotted"></div>
+                        </div>
+                        <!--右侧个人信息-->
+                        <div class="col-xs-12 col-sm-9">
+                            <div class="space-12"></div>
+                            <!--个人信息-->
+                            <div class="profile-user-info profile-user-info-striped">
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Username</div>
+
+                                    <div class="profile-info-value">
+                                        <span id="username" class="editable editable-click">PHP</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Location</div>
+
+                                    <div class="profile-info-value">
+
+                                        <span id="country" class="editable editable-click">China</span>
+                                        <span id="city" class="editable editable-click">Beijing</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Age</div>
+
+                                    <div class="profile-info-value">
+                                        <span id="age" class="editable editable-click">22</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Joined</div>
+
+                                    <div class="profile-info-value">
+                                        <span id="signup" class="editable editable-click">16/07/2016</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Last Online</div>
+
+                                    <div class="profile-info-value">
+                                        <span id="login" class="editable editable-click">3 hours ago</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> About Me</div>
+
+                                    <div class="profile-info-value">
+                                        <span id="about" class="editable editable-click">Editable as WYSIWYG</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-20"></div>
+
+                            <div class="widget-box transparent">
+                                <div class="widget-header widget-header-small">
+                                    <h4 class="blue smaller">
+                                        <i class="icon-rss orange"></i>
+                                        Recent Activities
+                                    </h4>
+
+                                    <div class="widget-toolbar action-buttons">
+                                        <a data-action="reload" href="#">
+                                            <i class="icon-refresh blue"></i>
+                                        </a>
+
+                                        &nbsp;
+                                        <a class="pink" href="#">
+                                            <i class="icon-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main padding-8">
+                                        <div class="slimScrollDiv"
+                                             style="position: relative; overflow: hidden; width: auto; height: 250px;">
+                                            <div class="profile-feed" id="profile-feed-1"
+                                                 style="overflow: hidden; width: auto; height: 250px;">
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <img src="images/avatars/avatar5.png" alt="Alex Doe's avatar"
+                                                             class="pull-left">
+                                                        <a href="#" class="user"> Alex Doe </a>
+                                                        changed his profile photo.
+                                                        <a href="#">Take a look</a>
+
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            an hour ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <img src="images/avatars/avatar1.png" alt="Susan Smith's avatar"
+                                                             class="pull-left">
+                                                        <a href="#" class="user"> Susan Smith </a>
+
+                                                        is now friends with Alex Doe.
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            2 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <i class="pull-left thumbicon icon-ok btn-success no-hover"></i>
+                                                        <a href="#" class="user"> Alex Doe </a>
+                                                        joined
+                                                        <a href="#">Country Music</a>
+
+                                                        group.
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            5 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <i class="pull-left thumbicon icon-picture btn-info no-hover"></i>
+                                                        <a href="#" class="user"> Alex Doe </a>
+                                                        uploaded a new photo.
+                                                        <a href="#">Take a look</a>
+
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            5 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <img src="images/avatars/avatar4.png" alt="David Palms's avatar"
+                                                             class="pull-left">
+                                                        <a href="#" class="user"> David Palms </a>
+
+                                                        left a comment on Alex's wall.
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            8 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <i class="pull-left thumbicon icon-edit btn-pink no-hover"></i>
+                                                        <a href="#" class="user"> Alex Doe </a>
+                                                        published a new blog post.
+                                                        <a href="#">Read now</a>
+
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            11 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <img src="images/avatars/avatar5.png" alt="Alex Doe's avatar"
+                                                             class="pull-left">
+                                                        <a href="#" class="user"> Alex Doe </a>
+
+                                                        upgraded his skills.
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            12 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <i class="pull-left thumbicon icon-key btn-info no-hover"></i>
+                                                        <a href="#" class="user"> Alex Doe </a>
+
+                                                        logged in.
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            12 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <i class="pull-left thumbicon icon-off btn-inverse no-hover"></i>
+                                                        <a href="#" class="user"> Alex Doe </a>
+
+                                                        logged out.
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            16 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <i class="pull-left thumbicon icon-key btn-info no-hover"></i>
+                                                        <a href="#" class="user"> Alex Doe </a>
+
+                                                        logged in.
+                                                        <div class="time">
+                                                            <i class="icon-time bigger-110"></i>
+                                                            16 hours ago
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="icon-pencil bigger-125"></i>
+                                                        </a>
+
+                                                        <a class="red" href="#">
+                                                            <i class="icon-remove bigger-125"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slimScrollBar ui-draggable"
+                                                 style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 97.5039px;"></div>
+                                            <div class="slimScrollRail"
+                                                 style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hr hr2 hr-double"></div>
+
+                            <div class="space-6"></div>
+
+                            <div class="center">
+                                <a class="btn-sm btn-primary" href="#">
+                                    <i class="icon-rss bigger-150 middle"></i>
+
+                                    <span class="bigger-160">View more</span>
+                                    <i class="icon-on-right icon-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+</div>
+</div>
+
+</body>
+</html>
