@@ -1,149 +1,166 @@
 <!DOCTYPE html>
-
-<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="siluzhou">
-    <meta name="keywords" content="php">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>PHP之路</title>
-    <!-- Style CSS -->
-    <link href="css/bootstrap.css" media="screen" rel="stylesheet">
-    <link href="css/style.css" media="screen" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet">
-    <link href="css/ace.min.css" rel="stylesheet">
-    <link href="css/ace-rtl.min.css" rel="stylesheet">
-    <link href="css/ace-skins.min.css" rel="stylesheet">
-    <link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet">
-    <script src="js/ace-extra.min.js">
-        if(!("ace" in window)){window.ace={}}ace.config={cookie_expiry:604800,storage_method:2};ace.settings={is:function(b,a){return(ace.data.get("settings",b+"-"+a)==1)},exists:function(b,a){return(ace.data.get("settings",b+"-"+a)!==null)},set:function(b,a){ace.data.set("settings",b+"-"+a,1)},unset:function(b,a){ace.data.set("settings",b+"-"+a,-1)},remove:function(b,a){ace.data.remove("settings",b+"-"+a)},navbar_fixed:function(a){a=a||false;if(!a&&ace.settings.is("sidebar","fixed")){ace.settings.sidebar_fixed(false)}var b=document.getElementById("navbar");if(a){if(!ace.hasClass(b,"navbar-fixed-top")){ace.addClass(b,"navbar-fixed-top")}if(!ace.hasClass(document.body,"navbar-fixed")){ace.addClass(document.body,"navbar-fixed")}ace.settings.set("navbar","fixed")}else{ace.removeClass(b,"navbar-fixed-top");ace.removeClass(document.body,"navbar-fixed");ace.settings.unset("navbar","fixed")}document.getElementById("ace-settings-navbar").checked=a},breadcrumbs_fixed:function(a){a=a||false;if(a&&!ace.settings.is("sidebar","fixed")){ace.settings.sidebar_fixed(true)}var b=document.getElementById("breadcrumbs");if(a){if(!ace.hasClass(b,"breadcrumbs-fixed")){ace.addClass(b,"breadcrumbs-fixed")}if(!ace.hasClass(document.body,"breadcrumbs-fixed")){ace.addClass(document.body,"breadcrumbs-fixed")}ace.settings.set("breadcrumbs","fixed")}else{ace.removeClass(b,"breadcrumbs-fixed");ace.removeClass(document.body,"breadcrumbs-fixed");ace.settings.unset("breadcrumbs","fixed")}document.getElementById("ace-settings-breadcrumbs").checked=a},sidebar_fixed:function(a){a=a||false;if(!a&&ace.settings.is("breadcrumbs","fixed")){ace.settings.breadcrumbs_fixed(false)}if(a&&!ace.settings.is("navbar","fixed")){ace.settings.navbar_fixed(true)}var b=document.getElementById("sidebar");if(a){if(!ace.hasClass(b,"sidebar-fixed")){ace.addClass(b,"sidebar-fixed")}ace.settings.set("sidebar","fixed")}else{ace.removeClass(b,"sidebar-fixed");ace.settings.unset("sidebar","fixed")}document.getElementById("ace-settings-sidebar").checked=a},main_container_fixed:function(a){a=a||false;var c=document.getElementById("main-container");var b=document.getElementById("navbar-container");if(a){if(!ace.hasClass(c,"container")){ace.addClass(c,"container")}if(!ace.hasClass(b,"container")){ace.addClass(b,"container")}ace.settings.set("main-container","fixed")}else{ace.removeClass(c,"container");ace.removeClass(b,"container");ace.settings.unset("main-container","fixed")}document.getElementById("ace-settings-add-container").checked=a;if(navigator.userAgent.match(/webkit/i)){var d=document.getElementById("sidebar");ace.toggleClass(d,"menu-min");setTimeout(function(){ace.toggleClass(d,"menu-min")},0)}},sidebar_collapsed:function(c){c=c||false;var e=document.getElementById("sidebar");var d=document.getElementById("sidebar-collapse").querySelector('[class*="icon-"]');var b=d.getAttribute("data-icon1");var a=d.getAttribute("data-icon2");if(c){ace.addClass(e,"menu-min");ace.removeClass(d,b);ace.addClass(d,a);ace.settings.set("sidebar","collapsed")}else{ace.removeClass(e,"menu-min");ace.removeClass(d,a);ace.addClass(d,b);ace.settings.unset("sidebar","collapsed")}},};ace.settings.check=function(c,e){if(!ace.settings.exists(c,e)){return}var a=ace.settings.is(c,e);var b={"navbar-fixed":"navbar-fixed-top","sidebar-fixed":"sidebar-fixed","breadcrumbs-fixed":"breadcrumbs-fixed","sidebar-collapsed":"menu-min","main-container-fixed":"container"};var d=document.getElementById(c);if(a!=ace.hasClass(d,b[c+"-"+e])){ace.settings[c.replace("-","_")+"_"+e](a)}};ace.data_storage=function(e,c){var b="ace.";var d=null;var a=0;if((e==1||e===c)&&"localStorage" in window&&window.localStorage!==null){d=ace.storage;a=1}else{if(d==null&&(e==2||e===c)&&"cookie" in document&&document.cookie!==null){d=ace.cookie;a=2}}this.set=function(h,g,i,k){if(!d){return}if(i===k){i=g;g=h;if(i==null){d.remove(b+g)}else{if(a==1){d.set(b+g,i)}else{if(a==2){d.set(b+g,i,ace.config.cookie_expiry)}}}}else{if(a==1){if(i==null){d.remove(b+h+"."+g)}else{d.set(b+h+"."+g,i)}}else{if(a==2){var j=d.get(b+h);var f=j?JSON.parse(j):{};if(i==null){delete f[g];if(ace.sizeof(f)==0){d.remove(b+h);return}}else{f[g]=i}d.set(b+h,JSON.stringify(f),ace.config.cookie_expiry)}}}};this.get=function(h,g,j){if(!d){return null}if(g===j){g=h;return d.get(b+g)}else{if(a==1){return d.get(b+h+"."+g)}else{if(a==2){var i=d.get(b+h);var f=i?JSON.parse(i):{};return g in f?f[g]:null}}}};this.remove=function(g,f,h){if(!d){return}if(f===h){f=g;this.set(f,null)}else{this.set(g,f,null)}}};ace.cookie={get:function(c){var d=document.cookie,g,f=c+"=",a;if(!d){return}a=d.indexOf("; "+f);if(a==-1){a=d.indexOf(f);if(a!=0){return null}}else{a+=2}g=d.indexOf(";",a);if(g==-1){g=d.length}return decodeURIComponent(d.substring(a+f.length,g))},set:function(b,e,a,g,c,f){var h=new Date();if(typeof(a)=="object"&&a.toGMTString){a=a.toGMTString()}else{if(parseInt(a,10)){h.setTime(h.getTime()+(parseInt(a,10)*1000));a=h.toGMTString()}else{a=""}}document.cookie=b+"="+encodeURIComponent(e)+((a)?"; expires="+a:"")+((g)?"; path="+g:"")+((c)?"; domain="+c:"")+((f)?"; secure":"")},remove:function(a,b){this.set(a,"",-1000,b)}};ace.storage={get:function(a){return window.localStorage.getItem(a)},set:function(a,b){window.localStorage.setItem(a,b)},remove:function(a){window.localStorage.removeItem(a)}};ace.sizeof=function(c){var b=0;for(var a in c){if(c.hasOwnProperty(a)){b++}}return b};ace.hasClass=function(b,a){return(" "+b.className+" ").indexOf(" "+a+" ")>-1};ace.addClass=function(c,b){if(!ace.hasClass(c,b)){var a=c.className;c.className=a+(a.length?" ":"")+b}};ace.removeClass=function(b,a){ace.replaceClass(b,a)};ace.replaceClass=function(c,b,d){var a=new RegExp(("(^|\\s)"+b+"(\\s|$)"),"i");c.className=c.className.replace(a,function(e,g,f){return d?(g+d+f):" "}).replace(/^\s+|\s+$/g,"")};ace.toggleClass=function(b,a){if(ace.hasClass(b,a)){ace.removeClass(b,a)}else{ace.addClass(b,a)}};ace.data=new ace.data_storage(ace.config.storage_method);
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Metro, a sleek, intuitive, and powerful framework for faster and easier web development for Windows Metro Style.">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, metro, front-end, frontend, web development">
+    <meta name="author" content="Sergey Pimenov and Metro UI CSS contributors">
+
+    <link rel='shortcut icon' type='image/x-icon' href='admin.png' />
+
+    <title>Login form :: Metro UI CSS - The front-end framework for developing projects on the web in Windows Metro Style</title>
+
+    <link href="css/metro.css" rel="stylesheet">
+    <link href="css/metro-icons.css" rel="stylesheet">
+    <link href="css/metro-responsive.css" rel="stylesheet">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/metro.js"></script>
+
+    <style>
+        .login-form {
+            width: 25rem;
+            height: 18.75rem;
+            position: fixed;
+            top: 50%;
+            margin-top: -9.375rem;
+            left: 50%;
+            margin-left: -12.5rem;
+            background-color: #ffffff;
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+        }
+    </style>
+
+    <script>
+
+        /*
+         * Do not use this is a google analytics fro Metro UI CSS
+         * */
+        if (window.location.hostname !== 'localhost') {
+
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-58849249-3', 'auto');
+            ga('send', 'pageview');
+
+        }
+
+
+        $(function(){
+            var form = $(".login-form");
+
+            form.css({
+                opacity: 1,
+                "-webkit-transform": "scale(1)",
+                "transform": "scale(1)",
+                "-webkit-transition": ".5s",
+                "transition": ".5s"
+            });
+        });
     </script>
 </head>
 
 
-<body>
-<div class="body_wrap">
-    <div class="container">
-        <!-- 顶层菜单 -->
-        <div class="content " role="main">
-            <!-- row -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <!-- Website Menu -->
-                    <div id="topmenu">
-                        <ul class="dropdown clearfix boxed boxed-blue">
 
-                            <li class="menu-level-0"><a href="index.html"><span>PHP之路</span></a></li>
-
-                            <li class="menu-level-0"><a href="course.html"><span>课程</span></a></li>
-                            <li class="menu-level-0"><a href="test.html"><span>测试</span></a></li>
-                            <li class="menu-level-0"><a href="personal.html"><span>个人信息</span></a></li>
-                            <li class="menu-level-0"><a href="about.html"><span>关于</span></a></li>
-                            <li class="menu-level-0"><a href="contact.html"><span>联系我们</span></a></li>
-                            <li class="menu-search">
-                                <form id="searchForm" class="menu-search-form" method="post">
-                                    <input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website" />
-                                    <input type="submit" value="" class="btn menu-search-submit" name="search-send" />
-                                </form>
-                            </li>
-                        </ul>
+<body class="bg-darkTeal">
+<div class="grid">
+    <div class="row cells2">
+        <div class="cell">
+            <h1><a class="mif-arrow-left transform fg-white" href="index.html"><span></span></a><span class="fg-white">&nbsp;Test</span>
+            </h1>
+        </div>
+        <div class="cell ">
+            <div class="place-right">
+                <div class="tile-small bg-blue fg-white">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-share"></span>
+                    </div>
+                </div>
+                <div class="tile-small bg-teal fg-white">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-upload2"></span>
+                    </div>
+                </div>
+                <div class="tile-small bg-amber fg-white">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-print"></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12" align="right">
-                <p>
-                    <button class="btn btn-app btn-purple btn-xs">
-                        <i class="icon-cloud-upload bigger-160"></i>
-                        Upload
-                    </button>
-                    <button class="btn btn-app btn-pink btn-xs">
-                        <i class="icon-share-alt bigger-160"></i>
-                        Share
-                    </button>
-                    <button class="btn btn-app btn-light btn-xs">
-                        <i class="icon-print bigger-160"></i>
-                        Print
-                    </button>
-                </p>
-            </div>
-            <div class="col-sm-12" align="center">
-                    <button class="btn btn-lg btn-primary">Start/Submit</button>
-                </div>
-            </div>
-        <br />
-        <div class="col-sm-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3>第1题</h3>
-                    <p align="center" fontsize="30px">请选择一个正确的选项.</p>
-                </div>
-            </div>
-        </div>
-        <br />
-            <div class="col-sm-12" align="center">
 
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <form role="form">
-
-                            <div class="radio radio-success">
-                                <input type="radio" name="radio" id="radio1" value="option1">
-                                <label for="radio1">
-                                    A. 该选项是正确的么？
-                                </label>
-                            </div>
-                            <div class="radio radio-success">
-                                <input type="radio" name="radio" id="radio2" value="option2" checked>
-                                <label for="radio2">
-                                    B. 该选项是正确的么？
-                                </label>
-                            </div>
-
-                            <div class="radio radio-success">
-                                <input type="radio" name="radio" id="radio3" value="option1">
-                                <label for="radio3">
-                                    C. 该选项是正确的么？
-                                </label>
-                            </div>
-                            <div class="radio radio-success">
-                                <input type="radio" name="radio" id="radio4" value="option2" checked>
-                                <label for="radio4">
-                                    D. 该选项是正确的么？
-                                </label>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-            <div class="row" align="center">
-                <div class="col-sm-6" align="center">
-                    <button class="btn btn-lg btn-yellow" align="center">上一题</button>
-
-                </div>
-                <div class="col-sm-6" align="center">
-                    <button class="btn btn-lg btn-yellow" align="center">下一题</button>
-                </div>
-
-            </div>
         </div>
     </div>
 </div>
+
+
+<div class="grid flex-just-center ">
+    <div class="row" align="center">
+
+            <button class="button warning block-shadow-success text-shadow">Start/Submit</button>
+
+    </div>
+
+    <div class="row cells4 ">
+        <div class="cell bg-blue offset1 fg-white " style="height: 400px">
+            <div class="margin30">
+                <h2 >第一题</h2>
+                <br />
+                <p>请选择一个正确的选项.</p>
+            </div>
+
+        </div>
+        <div class="cell  bg-teal fg-white" style="height: 400px">
+            <div class="margin30">
+                <div class="cell">
+
+                    <label class="input-control radio small-check">
+                        <input type="radio" checked="" name="radio" id="radio1" value="option1">
+                        <span class="check"></span>
+                        <span class="caption">A. 该选项是正确的么？</span>
+                    </label>
+                    <label class="input-control radio small-check">
+                        <input type="radio" name="radio" id="radio2" value="option1">
+                        <span class="check"></span>
+                        <span class="caption">B. 该选项是正确的么？</span>
+                    </label>
+                    <label class="input-control radio small-check">
+                        <input type="radio" name="radio" id="radio3" value="option1">
+                        <span class="check"></span>
+                        <span class="caption">C. 该选项是正确的么？</span>
+                    </label>
+                    <label class="input-control radio small-check">
+                        <input type="radio" name="radio" id="radio4" value="option1">
+                        <span class="check"></span>
+                        <span class="caption">D. 该选项是正确的么？</span>
+                    </label>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row cells4" align="center">
+        <div class="cell offset1">
+            <button class="button success">上一题</button>
+        </div>
+        <div class="cell">
+            <button class="button info">下一题</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
 
 </body>
 </html>
